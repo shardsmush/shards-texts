@@ -1,0 +1,10 @@
+& HELP
+Fate's Tithe
+
+  See http://fort.chrysalis.me/
+
+All news files are currently on the Wiki during the creation phase. 
+
+& test
+okay
+

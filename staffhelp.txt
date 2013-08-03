@@ -1,0 +1,103 @@
+& help
+------------------------------------------------------------------------------
+Index
+
+  This is the index of staff helpfiles, V1.0b(17JUL00)
+
+bb
+
+  To get help on any of the listed topics, type '+shelp <topic>'
+------------------------------------------------------------------------------
+
+& bb
+==============================================================================
+               Wizard Commands for Myrddin's Bulletin Board 4.0.6
+------------------------------------------------------------------------------
+     +bbnewgroup <title>             Creates a new group.
+     +bbcleargroup <#>               Clears group <#> and all it's messages.
+     +bblock <#>=<lock>/<key>        Locks group <#>. Lock can be 'flag' or
+                                       an attribute name.
+                                       Examples: +bblock 4=flag/wizard
+                                                 +bblock 5=race/were
+     +bbwritelock <#>=<lock>/<key>   Same as above, but controls who may write
+                                       to the group.
+     +bbconfig                       Shows values of all config parameters.
+                                       See '+shelp bbconfig' for help on
+                                       config parameters and how to set them.
+------------------------------------------------------------------------------
+See also: +shelp bbconfig, +shelp bblock (contains expanded help for locks)
+==============================================================================
+
+& bblock
+==============================================================================
+           Expanded Help on Group Locks for Myrddin's Bulletin Board
+------------------------------------------------------------------------------
+A few notes about locking BB Groups.
+
+The +bblock/+bbwritelock commands are only meant to take care of the simplest
+of locks.  There is simply no way to write one bblock'ing command that can
+deal with all the different ways people want to lock their BB Groups, and it
+certainly isn't practical to keep adding different locking commands for each
+locking method I come across.
+
+Coders can set up locks on Groups that are as customized or exotic as you like
+quite easily, however.  Each Group has its own object.  If you look inside
+the global BBS object, you'll see them.  Each Group object has a pair of
+attributes that control who may read and who may write to that Group.  The
+attributes are named CANREAD and CANWRITE, respectively.  The dbref of the
+player attempting to read/write is passed to the appropriate attribute as %0.
+As long as the attribute returns a non-zero result, the player can read/write.
+
+CANREAD Examples:
+   CANREAD: 1                               Anyone can read
+   CANREAD: hasflag(%0,wizard)              Only wizards can read
+   CANREAD: strmatch(name(%0),*z*)          Only characters with a 'z' in
+                                              their name can read
+==============================================================================
+
+& bbconfig
+==============================================================================
+          Configuration Parameters for Myrddin's Bulletin Board 4.0.6
+------------------------------------------------------------------------------
+There are two types of configuration parameters: global and group.  Global
+configuration parameters affect the BB system as a whole, while group 
+configuration parameters affect a single Group.
+To set a global parameter:
+
+     +bbconfig <param>=<value>       Sets global config parameter.
+
+Global Parameters:
+
+     timeout            This sets the default timeout (in days) for any new
+                          groups created. A timeout of '0' means messages
+                          won't timeout. (ex. +bbconfig timeout=30)
+     autotimeout        If you don't have a way to trigger the TR_TIMEOUT
+                          attribute on the bbpocket (daily) to clean out
+                          expired messages, you can use the autotimeout param
+                          instead. Setting this param 'on' enables the BB's
+                          built in timer. Set this param to 'off' to disable.
+------------------------------------------------------------------------------
+See '+shelp bbconfig2' for info on Group parameters
+==============================================================================
+
+& bbconfig2
+==============================================================================
+          Configuration Parameters for Myrddin's Bulletin Board 4.0.6
+------------------------------------------------------------------------------
+To set a Group parameter:
+
+     +bbconfig <#>/<param>=<value>   Sets config parameter for board <#>.
+
+Group Parameters:
+
+     anonymous          Setting this value turns the Group 'anonymous'.  This
+                          means that any future posting's 'Author' field will
+                          have the value of this param instead of the name of
+                          the author. Wizards will also see the actual name of
+                          author.  (examples:
+                          +bbconfig newspaper/anonymous=NewsPaper Staff,
+                          +bbconfig house rules/anonymous=The Staff)
+     timeout            Sets the default timeout value for the Group.  Any new
+                          messages will have this new value.  A value of '0'
+                          means messages won't timeout.
+==============================================================================
