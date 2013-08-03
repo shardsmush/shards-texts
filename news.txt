@@ -1,10 +1,63 @@
 & HELP
-Fate's Tithe
+Shards MUX
 
-  See http://fort.chrysalis.me/
+Topics:
 
-All news files are currently on the Wiki during the creation phase. 
+  sandbox
+  setting
+  house rules
+  
+& sandbox
 
-& test
-okay
+This is just a FYI. This game is not a regular MUX at this time: maybe someday it will be, but at such a time all current characters will be wiped. This is a sandbox, a place to place Numenera online among friends. That's all.
+
+& setting
+
+The Shards campaign takes has a "home base" in Xen, a city in the Cloudcrystal Skylands (north of the Steadfast). It is a made-up city with its own lore and depth which is covered under the "xen" topic. The stories will generally take place either in Xen, in the Depths, or (once this is discovered) literally anywhere on the Ninth World (or beyond). At the end of a chapter or series of sessions, we will always be returning to Xen. Some chapters will be about Xen itself.
+
+See also:
+   xen
+
+& house rules
+
+What?! A game was released just a half a minute ago and you already have house rules?! Only a little bit! Mostly here I'm writing down which of the optional rules I like and which I don't (and why).
+
+Active house rules:
+  hr-success
+  
+Rejected house rules:
+
+& hr-success
+
+In Numenera, success is usually binary; there is a Difficulty which determines the Target Number, and either you reach it or you do not. The only variation is in the special targets:
+
+  1: GM intervenes for free
+  19: Success, plus a minor beneficial effect
+  20: Success, plus a major beneficial effect
+  
+In general, combat attack rolls of 17 and 18 also add +1 and +2 damage respectively.
+
+For non-combat actions, we will periodically employ graduated successes. This will not USUALLY grant you an additional benefit -- that's what minor and major effects are for. 
+
+But, if the Target Number is 12 and you get 10 or 11, perhaps you didn't get everything you intended, but some lesser effect may be valid.
+
+For example, if there is an electronic lock that you want to create a key to bypass and the Target Number is 12, if you get a 11 you may be able to get one use out of it-- and when the door seals behind you, there's no easy way to get back out.
+
+See also:
+    difficulty
+    hr-routine
+    
+& difficulty
+
+The specific difficulty of a task is not directly known by players. To determine the difficulty of any given non-combat task is an Intellect task of difficulty 2 to consider the situation. For this task, if you are trained or specialized in the task you're considering it modifies the consideration roll -- thus, if you are specialized in the task you automatically succeed on the consideration role.
+
+For example, if you have the Lockpicking skill trained and want to know how hard a particular lock wll be to pick, you perform an Intellect task against a difficulty of 1. You are very likely to be able to det
+
+ In the heat of the moment, without time to consider things
+In general, the Difficulty of a task is 
+
+Difficulty is kind of a secret. I will not, in general, reveal the Difficulty of a task or Level of an enemy -- there are ways to find this information out (some cyphers may reveal that, perhaps an Intellect roll may give you an idea). 
+
+I will tell you if an action is routine or not: a routine action has no roll and you succeed automatically. A non-routine action can be MADE routine by spending Effort, but you won't know how much Effort it will take 
+
 
